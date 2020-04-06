@@ -4,6 +4,7 @@
 // MIT License · http://choosealicense.com/licenses/mit/ 
 
 import Foundation
+import os.log
 
 public extension String {
     /// Create a new string by replacing certain regex patterns with another string.
@@ -36,7 +37,7 @@ public extension String {
             }
             return resultsFinal
         } catch let error as NSError {
-            print("invalid regex: \(error.localizedDescription)")
+            os_log("Invalid regex: %@", type: .error, error.localizedDescription)
             return []
         }
     }
