@@ -46,6 +46,22 @@ Everything is written in Swift, documented and tested.
 
 - Synchronously load data.
 
+#### UserDefault
+
+A property wrapper for easy access on UserDefault-backed values. See also https://nshipster.com/propertywrapper/
+
+```
+// Define a UserDefault backed value
+//
+@UserDefault("MyValue", defaultValue: true)
+static var myValue: Bool
+
+...
+
+// value will be written to the UserDefaults
+myValue = false 
+```
+
 ## Installation
 
 ### [Swift Package](https://github.com/apple/swift-package-manager/blob/master/Documentation/PackageDescription.md#supportedplatform)
